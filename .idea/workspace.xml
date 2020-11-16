@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a0830f93-657b-4b48-812f-dafd2288329c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kKp8jFDIKsFdWrtagMFYWoo7UA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0830f93-657b-4b48-812f-dafd2288329c" name="Default Changelist" comment="" />
+      <created>1605458979770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605458979770</updated>
+      <workItem from="1605458980816" duration="58000" />
+      <workItem from="1605459044670" duration="1304000" />
+      <workItem from="1605467703480" duration="3287000" />
+      <workItem from="1605517731116" duration="425000" />
+      <workItem from="1605530553188" duration="831000" />
+      <workItem from="1605538918041" duration="16427000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2281" y="-24" key="#Plugins" timestamp="1605459038166">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2281" y="-24" key="#Plugins/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605459038166" />
+    <state x="2281" y="-6" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605546068363">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2281" y="-6" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605546068363" />
+    <state x="2110" y="54" key="#com.intellij.ide.util.MemberChooser" timestamp="1605559029041">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2110" y="54" key="#com.intellij.ide.util.MemberChooser/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605559029041" />
+    <state x="2469" y="90" key="FileChooserDialogImpl" timestamp="1605559766850">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2469" y="90" key="FileChooserDialogImpl/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605559766850" />
+    <state x="2178" y="236" key="Github.ShareDialog" timestamp="1605559750648">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2178" y="236" key="Github.ShareDialog/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605559750648" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1605552403795">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605552403795" />
+    <state x="2241" y="58" key="NewPhpClassDialog" timestamp="1605558961525">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2241" y="58" key="NewPhpClassDialog/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605558961525" />
+    <state x="2140" y="259" key="NewPhpFileDialog" timestamp="1605556766490">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2140" y="259" key="NewPhpFileDialog/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605556766490" />
+    <state x="2197" y="-20" key="SettingsEditor" timestamp="1605459541686">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2197" y="-20" key="SettingsEditor/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605459541686" />
+    <state x="2588" y="212" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605546098839">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2588" y="212" key="com.intellij.database.actions.DdlActions$CreateObject$1/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605546098839" />
+    <state x="2224" y="50" width="527" height="491" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605556537492">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2224" y="50" width="527" height="491" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605556537492" />
+    <state x="2351" y="70" width="672" height="678" key="search.everywhere.popup" timestamp="1605459013424">
+      <screen x="1920" y="-125" width="1536" height="920" />
+    </state>
+    <state x="2351" y="70" width="672" height="678" key="search.everywhere.popup/1920.-125.1536.920/0.0.1536.824@1920.-125.1536.920" timestamp="1605459013424" />
+  </component>
+</project>
