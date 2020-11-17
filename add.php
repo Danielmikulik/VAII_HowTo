@@ -1,3 +1,7 @@
+<?php
+include 'Application.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +31,15 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlFile1">Vložte obrázok</label>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+        <input type="file" class="form-control-file" name="image">
     </div>
     <input type="submit" class="btn btn-primary" name="add" value="Pridať">
 </form>
+
+<?php
+    $app = new Application();
+    $app->processData();
+?>
 
 </body>
 </html>

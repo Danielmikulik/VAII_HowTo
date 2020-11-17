@@ -1,3 +1,7 @@
+<?php
+include 'Application.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +52,11 @@
 
     <section class="col-8 container-fluid content-section">
         <div class="list-group">
-            <a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
+            <?php
+                $app = new Application();
+                $app->loadAllGuides();
+            ?>
+            <!--<a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
                 <div class="row no-gutters">
                     <div class="col-auto">
                         <img src="//placehold.it/200" class="img-fluid img-thumbnail" alt="">
@@ -91,7 +99,7 @@
                         <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                     </div>
                 </div>
-            </a>
+            </a>-->
         </div>
     </section>
 
