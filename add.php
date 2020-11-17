@@ -23,7 +23,7 @@ include 'Application.php';
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php">How to</a>
+    <a class="navbar-brand" href="index.php">Ako na to</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,8 +35,8 @@ include 'Application.php';
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Hľadať" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hľadať</button>
         </form>
     </div>
 </nav>
@@ -63,8 +63,11 @@ include 'Application.php';
 
 
 <?php
-    $app = new Application();
-    $app->processData();
+    if (isset($_POST['add'])) {
+        $app = new Application();
+        $app->processData();
+        header("Location: index.php");
+    }
 ?>
 
 </body>

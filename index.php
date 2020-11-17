@@ -21,7 +21,7 @@ include 'Application.php';
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">How to</a>
+        <a class="navbar-brand" href="#">Ako na to</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,12 +29,12 @@ include 'Application.php';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="add.php">Add guide <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="add.php">Pridať návod<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Hľadať" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hľadať</button>
             </form>
         </div>
     </nav>
@@ -45,72 +45,6 @@ include 'Application.php';
                 $app = new Application();
                 echo $app->loadAllGuides();
             ?>
-
-            <!--<?php
-                $app = new Application();
-                $guides = $app->load();
-                foreach ($guides as $guide) {?>
-                    <a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
-                        <div class="row no-gutters">
-                            <div class="col-auto">
-                                <img src="<?php echo $guide['view_pic']; ?>" class="img-fluid img-thumbnail" alt="">
-                            </div>
-                            <div class="col card-block px-2">
-                                <div class="d-flex w-100 justify-content-between ">
-                                    <h5 class="mb-1"><?php echo $guide['title'] ?></h5>
-                                    <small><?php echo $guide['uploaded'] ?></small>
-                                </div>
-                                <br>
-                                <p class="mb-1"><?php echo $guide['description'] ?></p>
-                            </div>
-                        </div>
-                    </a>
-
-            <?php } ?>-->
-            <!--<a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
-                <div class="row no-gutters">
-                    <div class="col-auto">
-                        <img src="//placehold.it/200" class="img-fluid img-thumbnail" alt="">
-                    </div>
-                    <div class="col card-block px-2">
-                        <div class="d-flex w-100 justify-content-between ">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small>3 days ago</small>
-                        </div>
-                        <br>
-                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
-                <div class="row no-gutters">
-                    <div class="col-auto">
-                        <img src="//placehold.it/200" class="img-fluid img-thumbnail" alt="">
-                    </div>
-                    <div class="col card-block px-2">
-                        <div class="d-flex w-100 justify-content-between ">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small>3 days ago</small>
-                        </div>
-                        <br>
-                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </div>
-                </div>
-            </a><a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
-                <div class="row no-gutters">
-                    <div class="col-auto">
-                        <img src="//placehold.it/200" class="img-fluid img-thumbnail" alt="">
-                    </div>
-                    <div class="col card-block px-2">
-                        <div class="d-flex w-100 justify-content-between ">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small>3 days ago</small>
-                        </div>
-                        <br>
-                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </div>
-                </div>
-            </a>-->
         </div>
     </section>
 

@@ -22,7 +22,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">How to</a>
+        <a class="navbar-brand" href="index.php">Ako na to</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,13 +30,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="edit.php?id=<?php echo $_GET['id']?>">Edit<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="edit.php?id=<?php echo $_GET['id']?>">Upraviť<span class="sr-only">(current)</span></a>
                 </li>
-
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Hľadať" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hľadať</button>
             </form>
         </div>
     </nav>
@@ -63,10 +62,10 @@
             <h5 class="mb-1 title-preview"><?php echo $guide['title'] ?></h5>
         </div>
         <br>
-        <p class="mb-1"><?php echo $guide['description'] ?></p>
+        <p class="mb-1 justify"><?php echo $guide['description'] ?></p>
         <br>
         <form method="post">
-            <a href="index.php"><button type="submit" name="delete" class="btn btn-danger">Delete</button></a>
+            <a href="index.php"><button type="submit" name="delete" class="btn btn-danger">Zmazať</button></a>
         </form>
     </section>
 

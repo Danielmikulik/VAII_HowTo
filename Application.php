@@ -37,12 +37,14 @@ class Application
                                         '<img src="'. $guide["view_pic"] . '" class="img-fluid img-thumbnail img-preview" alt="">'.
                                     '</div>'.
                                     '<div class="col card-block px-2">'.
-                                        '<div class="d-flex w-100 justify-content-between ">'.
-                                            '<h5 class="mb-1">'.$guide['title'].'</h5>'.
-                                            '<small>'.$guide['uploaded'].'</small>'.
+                                        '<div class="d-flex w-100 justify-content-between">'.
+                                            '<h5 class="mb-1 title-preview">'.$guide['title'].'</h5>'.
                                         '</div>'.
                                         '<br>'.
                                         '<p class="mb-1 text-preview">'.$guide['description'].'</p>'.
+                                        '<div class="date">'.
+                                            '<small class="date">'.$guide['uploaded'].'</small>'.
+                                        '</div>'.
                                     '</div>'.
                                ' </div>'.
                             '</a>';

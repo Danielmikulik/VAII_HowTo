@@ -48,3 +48,12 @@
 .text-input {
     overflow-wrap: break-word;
 }
+
+.date{
+    text-align: right;
+    color: #808080;
+}
+
+.justify {
+    text-align: justify;
+}
