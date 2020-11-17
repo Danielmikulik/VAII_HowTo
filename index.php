@@ -54,8 +54,30 @@ include 'Application.php';
         <div class="list-group">
             <?php
                 $app = new Application();
-                $app->loadAllGuides();
+                echo $app->loadAllGuides();
             ?>
+
+            <!--<?php
+                $app = new Application();
+                $guides = $app->load();
+                foreach ($guides as $guide) {?>
+                    <a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
+                        <div class="row no-gutters">
+                            <div class="col-auto">
+                                <img src="<?php echo $guide['view_pic']; ?>" class="img-fluid img-thumbnail" alt="">
+                            </div>
+                            <div class="col card-block px-2">
+                                <div class="d-flex w-100 justify-content-between ">
+                                    <h5 class="mb-1"><?php echo $guide['title'] ?></h5>
+                                    <small><?php echo $guide['uploaded'] ?></small>
+                                </div>
+                                <br>
+                                <p class="mb-1"><?php echo $guide['description'] ?></p>
+                            </div>
+                        </div>
+                    </a>
+
+            <?php } ?>-->
             <!--<a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">
                 <div class="row no-gutters">
                     <div class="col-auto">

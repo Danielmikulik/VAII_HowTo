@@ -39,13 +39,14 @@ class DBManager
 
                 $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
                 if (in_array($fileType, $allowTypes)) {
-                    $image = $_FILES['image']['tmp_name'];
-                    $imgContent = addslashes(file_get_contents($image));
+                    //$image = $_FILES['image']['tmp_name'];
+                    //$imgContent = addslashes(file_get_contents($image));
 
-                    $this->saveToDB(new Guide($_POST['title'], $_POST['description'], $imgContent));
+                    $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']) );
+                    $imgContent = 'data:image/'.$fileType.';base64,'.$image_base64;
                 }
             }
-
+            $this->saveToDB(new Guide($_POST['title'], $_POST['description'], $imgContent));
         }
     }
 
@@ -67,5 +68,12 @@ class DBManager
     public function loadAllGuides()
     {
         return $this->db->query('SELECT * FROM guide');
+    }
+
+    public function getDetail($id)
+    {
+        $stmt = $this->db->prepare('SELECT * FROM guide WHERE id=?');
+        $stmt->execute([$id]);
+        return $stmt->fetch();
     }
 }

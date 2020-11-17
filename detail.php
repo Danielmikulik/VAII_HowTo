@@ -1,3 +1,7 @@
+<?php
+    include 'DBManager.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,15 +44,20 @@
         </div>
     </nav>
 
+    <?php
+    $dbManager = new DBManager();
+    $guide = $dbManager->getDetail($_GET['id']);
+    ?>
+
     <section class="col-8 container-fluid content-section">
         <div class="col-auto">
-            <img src="//placehold.it/200" class="img-fluid img-thumbnail" alt="">
+            <img src="<?php echo $guide['view_pic'] ?>" class="img-fluid img-thumbnail img-preview" alt="">
         </div>
         <div class="d-flex w-100 justify-content-between ">
-            <h5 class="mb-1">List group item heading</h5>
+            <h5 class="mb-1"><?php echo $guide['title'] ?></h5>
         </div>
         <br>
-        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <p class="mb-1"><?php echo $guide['description'] ?></p>
     </section>
 
 

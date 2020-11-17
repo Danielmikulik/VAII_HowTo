@@ -19,28 +19,34 @@ class Application
         $this->dbManager->processData();
     }
 
+    public function load()
+    {
+        return $this->dbManager->loadAllGuides();
+    }
+
     public function loadAllGuides()
     {
         $guides = $this->dbManager->loadAllGuides();
 
+        $result = '';
+
         foreach ($guides as $guide) {
-            echo '<a href="detail.php" class="list-group-item list-group-item-action flex-column align-items-start card">';
-            echo '    <div class="row no-gutters">';
-            echo '        <div class="col-auto">';
-            echo '            <img src="' . $guide['image'] . '" class="img-fluid img-thumbnail" alt="">';
-            echo '        </div>';
-            echo '        <div class="col card-block px-2">';
-            echo '            <div class="d-flex w-100 justify-content-between ">';
-            echo '                <h5 class="mb-1">List group item heading</h5>';
-            echo '                <small>3 days ago</small>';
-            echo '            </div>';
-            echo '            <br>';
-            echo '            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>';
-            echo '        </div>';
-            echo '    </div>';
-            echo '</a>';
+             $result .=     '<a href="detail.php?id='.$guide['id'].'" class="list-group-item list-group-item-action flex-column align-items-start card">' .
+                                '<div class="row no-gutters">'.
+                                    '<div class="col-auto">'.
+                                        '<img src="'. $guide["view_pic"] . '" class="img-fluid img-thumbnail img-preview" alt="">'.
+                                    '</div>'.
+                                    '<div class="col card-block px-2">'.
+                                        '<div class="d-flex w-100 justify-content-between ">'.
+                                            '<h5 class="mb-1">'.$guide['title'].'</h5>'.
+                                            '<small>'.$guide['uploaded'].'</small>'.
+                                        '</div>'.
+                                        '<br>'.
+                                        '<p class="mb-1">'.$guide['description'].'</p>'.
+                                    '</div>'.
+                               ' </div>'.
+                            '</a>';
         }
-
-
+        return $result;
     }
 }
