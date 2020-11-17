@@ -31,7 +31,7 @@ include 'Application.php';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="add.php">Add guide <span class="sr-only">(current)</span></a>
+
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -48,7 +48,7 @@ include 'Application.php';
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Popis</label>
-        <input type="text" class="form-control" name="description" placeholder="Vložte popis" required>
+        <textarea class="form-control text-input" name="description" rows="5" placeholder="Vložte popis" required></textarea>
     </div>
     <div class="form-group">
         <label for="exampleFormControlFile1">Vložte obrázok</label>

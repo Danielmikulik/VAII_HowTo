@@ -57,6 +57,11 @@ class Application
 
     public function deleteGuideById($id)
     {
-        $this->dbManager->deleteGuidebyId($id);
+        $this->dbManager->deleteGuideById($id);
+    }
+
+    public function updateGuideById($id, $title, $description)
+    {
+        $this->dbManager->updateGuideById($id, $title, $description);
     }
 }

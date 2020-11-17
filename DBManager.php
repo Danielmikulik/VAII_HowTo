@@ -32,17 +32,7 @@ class DBManager
                 echo 'You need to fill title and description.';
                 return;
             }
-
-            if (!empty($_FILES['image']['name'])) {
-                $fileName = basename($_FILES['image']['name']);
-                $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-
-                $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
-                if (in_array($fileType, $allowTypes)) {
-                    $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
-                    $imgContent = 'data:image/'.$fileType.';base64,'.$image_base64;
-                }
-            }
+            $imgContent = $this->encodeImage($imgContent);
             $this->saveToDB(new Guide($_POST['title'], $_POST['description'], $imgContent));
         }
     }
@@ -50,13 +40,8 @@ class DBManager
     public function saveToDB(Guide $guide)
     {
         try {
-            $statusMsg = 'na pipik';
             $sql = 'INSERT INTO guide(title, description, view_pic) VALUES (?, ?, ?)';
-            $insert = $this->db->prepare($sql)->execute([$guide->getTitle(), $guide->getDescription(), $guide->getImage()]);
-            if ($insert) {
-                $statusMsg = "File uploaded successfully.";
-            }
-            echo $statusMsg;
+            $this->db->prepare($sql)->execute([$guide->getTitle(), $guide->getDescription(), $guide->getImage()]);
         } catch (PDOException $exception) {
             echo 'Insert failed: ' . $exception->getMessage();
         }
@@ -74,14 +59,35 @@ class DBManager
         return $stmt->fetch();
     }
 
-    public function deleteGuidebyId($id)
+    public function deleteGuideById($id)
     {
         $stmt = $this->db->prepare('DELETE FROM guide WHERE id=?');
-        $delete = $stmt->execute([$id]);
-        if ($delete) {
-            echo "gut";
-        } else {
-            echo "not gut";
+        $stmt->execute([$id]);
+    }
+
+    public function updateGuideById($id, $title, $description)
+    {
+        $guide = $this->getDetail($id);
+        $imgContent = $this->encodeImage($guide['view_pic']);
+
+        if (isset($_POST['title']) && isset($_POST['description'])) {
+            $stmt = $this->db->prepare('UPDATE guide SET title=?, description=?, view_pic=? WHERE id=?');
+            $stmt->execute([$title, $description, $imgContent, $id]);
         }
+    }
+
+    private function encodeImage($imgContent)
+    {
+        if (!empty($_FILES['image']['name'])) {
+            $fileName = basename($_FILES['image']['name']);
+            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+
+            $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+            if (in_array($fileType, $allowTypes)) {
+                $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
+                $imgContent = 'data:image/'.$fileType.';base64,'.$image_base64;
+            }
+        }
+        return $imgContent;
     }
 }
