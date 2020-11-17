@@ -55,8 +55,6 @@ include 'Application.php';
         <input type="file" class="form-control-file" name="image">
     </div>
 
-
-
     <input type="submit" class="btn btn-primary" name="add" value="Pridať">
 </form>
 

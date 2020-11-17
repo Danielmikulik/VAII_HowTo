@@ -42,11 +42,21 @@ class Application
                                             '<small>'.$guide['uploaded'].'</small>'.
                                         '</div>'.
                                         '<br>'.
-                                        '<p class="mb-1">'.$guide['description'].'</p>'.
+                                        '<p class="mb-1 text-preview">'.$guide['description'].'</p>'.
                                     '</div>'.
                                ' </div>'.
                             '</a>';
         }
         return $result;
+    }
+
+    public function getDetail($id)
+    {
+        return $this->dbManager->getDetail($id);
+    }
+
+    public function deleteGuideById($id)
+    {
+        $this->dbManager->deleteGuidebyId($id);
     }
 }

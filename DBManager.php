@@ -39,10 +39,7 @@ class DBManager
 
                 $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
                 if (in_array($fileType, $allowTypes)) {
-                    //$image = $_FILES['image']['tmp_name'];
-                    //$imgContent = addslashes(file_get_contents($image));
-
-                    $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']) );
+                    $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
                     $imgContent = 'data:image/'.$fileType.';base64,'.$image_base64;
                 }
             }
@@ -67,7 +64,7 @@ class DBManager
 
     public function loadAllGuides()
     {
-        return $this->db->query('SELECT * FROM guide');
+        return $this->db->query('SELECT * FROM guide ORDER BY uploaded desc');
     }
 
     public function getDetail($id)
@@ -75,5 +72,16 @@ class DBManager
         $stmt = $this->db->prepare('SELECT * FROM guide WHERE id=?');
         $stmt->execute([$id]);
         return $stmt->fetch();
+    }
+
+    public function deleteGuidebyId($id)
+    {
+        $stmt = $this->db->prepare('DELETE FROM guide WHERE id=?');
+        $delete = $stmt->execute([$id]);
+        if ($delete) {
+            echo "gut";
+        } else {
+            echo "not gut";
+        }
     }
 }

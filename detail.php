@@ -1,5 +1,5 @@
 <?php
-    include 'DBManager.php';
+    include 'Application.php';
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +32,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="edit.php">Edit<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Delete<span class="sr-only">(current)</span></a>
-                </li>
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -45,19 +42,32 @@
     </nav>
 
     <?php
-    $dbManager = new DBManager();
-    $guide = $dbManager->getDetail($_GET['id']);
+        if (!isset($_POST['submit'])) {
+            $app = new Application();
+            $guide = $app->getDetail($_GET['id']);
+        }
     ?>
-
+    <?php
+    if (isset($_POST['delete'])) {
+        $app = new Application();
+        $app->deleteGuideById($_GET['id']);
+        header("Location: index.php");
+    }
+    ?>
     <section class="col-8 container-fluid content-section">
         <div class="col-auto">
-            <img src="<?php echo $guide['view_pic'] ?>" class="img-fluid img-thumbnail img-preview" alt="">
+            <img src="<?php echo $guide['view_pic'] ?>" class="img-fluid img-thumbnail img-detail" alt="">
         </div>
+        <br>
         <div class="d-flex w-100 justify-content-between ">
-            <h5 class="mb-1"><?php echo $guide['title'] ?></h5>
+            <h5 class="mb-1 title-preview"><?php echo $guide['title'] ?></h5>
         </div>
         <br>
         <p class="mb-1"><?php echo $guide['description'] ?></p>
+        <br>
+        <form method="post">
+            <a href="index.php"><button type="submit" name="delete" class="btn btn-danger">Delete</button></a>
+        </form>
     </section>
 
 
